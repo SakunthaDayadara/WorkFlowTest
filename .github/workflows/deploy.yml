@@ -21,6 +21,7 @@ jobs:
         key: ${{ secrets.SERVER_SSH_KEY }}
         port: 22
         script: |
+          git config --global --add safe.directory /git_test/WorkFlowTest
           cd /git_test/WorkFlowTest
           git pull origin main
 
